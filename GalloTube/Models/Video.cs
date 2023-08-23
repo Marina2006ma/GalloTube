@@ -24,13 +24,13 @@ public class Video
     [Required(ErrorMessage = "A Duração é obrigatória")]
     public Int16 Duration { get; set; }
 
-    [Column(TypeName = "UploadDate")]
+   
     [Display(Name = "Data de publicação")]
     [Required(ErrorMessage = "A Data de publicação é obrigatório")]
     public DateTime UploadDate { get; set; }
 
     [StringLength(200)]
-    [Display(Name = "Thumbnail")]
+    [Display(Name = "Capa")]
     public string Thumbnail { get; set; }
 
     [StringLength(200)]
