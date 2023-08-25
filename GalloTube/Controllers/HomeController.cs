@@ -23,10 +23,21 @@ public class HomeController : Controller
         return View(Videos);
     }
 
+    public IActionResult Video(int? id)
+    {
+        var video = _context.Videos
+            .Where(m => m.Id == id)
+            .Include(m => m.Tags)
+            .ThenInclude(g => g.Tag)
+            .SingleOrDefault();
+        return View(video);
+    }
+
     public IActionResult Privacy()
     {
         return View();
     }
+
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

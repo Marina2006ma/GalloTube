@@ -11,13 +11,13 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <img src="@Model.Image" alt="@Model.Name" class="img-fluid">
+                <img src="@Model.Thumbnail" alt="@Model.Name" class="img-fluid">
             </div>
             <div class="col-md-9">
                 <p>Duração: @Model.HourDuration</p>
-                @foreach(VideoTag VideoGenre in Model.Tags)
+                @foreach(VideoTag VideoTag in Model.Tags)
                 {
-                    <span class="badge bg-secondary me-2">@VideoGenre.Tag.Name</span>
+                    <span class="badge bg-secondary me-2">@VideoTag.Tag.Name</span>
                 }
             </div>
         </div>

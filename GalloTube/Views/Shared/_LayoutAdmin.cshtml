@@ -44,17 +44,18 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link @(ViewBag.Title == "Filmes" ? "active" : "link-body-emphasis")">
-                            <i class="bi bi-film me-2"></i>
-                            Filmes
-                        </a>
+                    <a asp-action="Index" asp-controller="Videos" class="nav-link @(ViewBag.Title == "Videos" ? "active" : "link-body-emphasis")">
+                     <i class="bi bi-film me-2"></i>
+                         Videos
+                     </a>
                     </li>
-                    <li>
-                        <a href="#" class="nav-link @(ViewBag.Title == "Genêros" ? "active" : "link-body-emphasis")">
-                            <i class="bi bi-list-stars me-2"></i>
-                            Genêros
-                        </a>
-                    </li>
+                        <li>
+                            <a asp-action="Index" asp-controller="Tags" class="nav-link @(ViewBag.Title == "Tags" ? "active" : "link-body-emphasis")">
+                                <i class="bi bi-list-stars me-2"></i>
+                                Tags
+                            </a>
+                        </li>
+
                     <li>
                         <a href="#" class="nav-link @(ViewBag.Title == "Usuários" ? "active" : "link-body-emphasis")">
                             <i class="bi bi-people-fill me-2"></i>
